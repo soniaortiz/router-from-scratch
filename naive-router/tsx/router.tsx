@@ -3,9 +3,9 @@ import * as ReactDOM from 'react-dom';
 
 interface props<T>{
     mapping: {
-        '#profile': any,
-        '#accounts': any,
-        '*': any,
+        '#profile': JSX.Element,
+        '#accounts': JSX.Element,
+        '*': JSX.Element,
         [key: string]: any
     }
 }
@@ -20,7 +20,7 @@ export class Router extends React.Component<props<string>, state>{
         this.state = {hash: window.location.hash};
         this.updateHash =  this.updateHash.bind(this);
     }
-    updateHash(event : any){
+    updateHash(event : HashChangeEvent){
         this.setState({hash: window.location.hash});
     }
     componentDidMount(){
