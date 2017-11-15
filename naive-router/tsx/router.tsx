@@ -26,7 +26,6 @@ export class Router extends React.Component<props<string>, state>{
     componentDidMount(){
         window.addEventListener('hashchange', this.updateHash, false);//new url hash values
     }
-
     componentWillUnmount(){
         window.removeEventListener('hashchange', this.updateHash, false);
     }
