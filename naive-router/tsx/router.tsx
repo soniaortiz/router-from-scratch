@@ -6,7 +6,7 @@ interface props<T>{
         '#profile': JSX.Element,
         '#accounts': JSX.Element,
         '*': JSX.Element,
-        [key: string]: any
+        [key: string]: JSX.Element
     }
 }
 
